@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NATEVA — curated everyday essentials, fashion, technology and accessories.">
+    <title>NATEVA — Everyday Essentials</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ==================== ANNOUNCEMENT BAR ==================== -->
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span><i class="bi bi-stars"></i> Free shipping for orders over Rp500.000</span>
+            <span class="announcement-secondary">Thoughtfully selected for everyday living.</span>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home" aria-label="NATEVA Home">
+                <span class="brand-mark">N</span>
+                <span>NATEVA</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false"
+                    aria-label="Buka menu navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="icon-button" type="button" id="searchButton" aria-label="Cari produk">
+                        <i class="bi bi-search"></i>
+                    </button>
+
+                    <button class="icon-button position-relative" type="button" id="wishlistButton" aria-label="Lihat wishlist">
+                        <i class="bi bi-heart"></i>
+                        <span class="nav-count d-none" id="wishlistCount">0</span>
+                    </button>
+
+                    <button class="cart-button" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#cartCanvas"
+                            aria-controls="cartCanvas">
+                        <i class="bi bi-bag"></i>
+                        <span>Cart</span>
+                        <span class="nav-count d-none" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ==================== HERO ==================== -->
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="eyebrow">NEW SEASON · 2026</span>
+                        <h1>Everyday things,<br><span>beautifully chosen.</span></h1>
+                        <p class="hero-copy">
+                            Discover thoughtfully selected essentials made to fit your
+                            style, routine, and everyday moments.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="#shop" class="btn btn-dark btn-lg">
+                                Shop collection
+                                <i class="bi bi-arrow-up-right ms-2"></i>
+                            </a>
+                            <a href="#categories" class="text-link">
+                                Explore categories <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="hero-note">
+                            <i class="bi bi-patch-check-fill"></i>
+                            Carefully selected · Quality first · Easy shopping
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-visual">
+                            <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1200&q=90"
+                                 alt="Koleksi fashion dan lifestyle NATEVA"
+                                 class="hero-image">
+                            <div class="hero-tag">
+                                <small>FEATURED EDIT</small>
+                                <strong>Quiet essentials</strong>
+                            </div>
+                            <div class="hero-floating">
+                                <i class="bi bi-box-seam"></i>
+                                <div>
+                                    <strong>Free delivery</strong>
+                                    <small>Orders over Rp500K</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CATEGORY SECTION ==================== -->
+        <section class="categories-section" id="categories">
+            <div class="container">
+                <div class="section-top">
+                    <div>
+                        <span class="eyebrow">SHOP BY CATEGORY</span>
+                        <h2>Made for your everyday.</h2>
+                    </div>
+                    <p>Simple, useful pieces that work effortlessly with your routine.</p>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-12 col-md-4">
+                        <button class="category-card" type="button" data-category="fashion">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
+                                 alt="Fashion collection">
+                            <span class="category-overlay">
+                                <small>01</small>
+                                <strong>Fashion</strong>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <button class="category-card" type="button" data-category="electronics">
+                            <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=900&q=85"
+                                 alt="Electronics collection">
+                            <span class="category-overlay">
+                                <small>02</small>
+                                <strong>Electronics</strong>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <button class="category-card" type="button" data-category="accessories">
+                            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=85"
+                                 alt="Accessories collection">
+                            <span class="category-overlay">
+                                <small>03</small>
+                                <strong>Accessories</strong>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SHOP / PRODUCTS ==================== -->
+        <section class="shop-section" id="shop">
+            <div class="container">
+                <div class="section-top shop-heading">
+                    <div>
+                        <span class="eyebrow">THE EDIT</span>
+                        <h2>Featured products.</h2>
+                    </div>
+                    <div class="shop-side">
+                        <p>Pieces worth making part of your everyday.</p>
+                        <div class="filter-wrap" role="group" aria-label="Filter produk">
+                            <button class="filter-btn active" type="button" data-filter="all">All</button>
+                            <button class="filter-btn" type="button" data-filter="fashion">Fashion</button>
+                            <button class="filter-btn" type="button" data-filter="electronics">Electronics</button>
+                            <button class="filter-btn" type="button" data-filter="accessories">Accessories</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsive grid: 1 → 2 → 3 → 4 -->
+                <div class="row g-4" id="productGrid">
+
+                    <!-- 1 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 product-item" data-category="electronics" data-name="Pulse Smartwatch">
+                        <article class="product-card">
+                            <div class="product-image-wrap">
+                                <span class="product-badge">BEST SELLER</span>
+                                <button class="favorite-btn" type="button" aria-label="Tambah Pulse Smartwatch ke wishlist"
+                                        data-wishlist-id="pulse-smartwatch">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=85"
+                                     alt="Pulse Smartwatch" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Electronics</span>
+                                <h3>Pulse Smartwatch</h3>
+                                <p>Minimal smartwatch for your daily rhythm.</p>
+                                <div class="rating"><i class="bi bi-star-fill"></i><strong>4.9</strong><span>128 reviews</span></div>
+                                <div class="product-bottom">
+                                    <div class="price"><del>Rp999.000</del><strong>Rp799.000</strong></div>
+                                    <button class="add-cart-btn" type="button"
+                                            data-id="pulse-smartwatch" data-name="Pulse Smartwatch"
+                                            data-price="799000"
+                                            data-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80"
+                                            aria-label="Tambah Pulse Smartwatch ke keranjang">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 product-item" data-category="fashion" data-name="Urban Sneakers">
+                        <article class="product-card">
+                            <div class="product-image-wrap">
+                                <span class="product-badge">NEW</span>
+                                <button class="favorite-btn" type="button" aria-label="Tambah Urban Sneakers ke wishlist"
+                                        data-wishlist-id="urban-sneakers">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=85"
+                                     alt="Urban Sneakers" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Fashion</span>
+                                <h3>Urban Sneakers</h3>
+                                <p>Comfortable everyday sneakers with a clean silhouette.</p>
+                                <div class="rating"><i class="bi bi-star-fill"></i><strong>4.8</strong><span>96 reviews</span></div>
+                                <div class="product-bottom">
+                                    <div class="price"><del>Rp799.000</del><strong>Rp649.000</strong></div>
+                                    <button class="add-cart-btn" type="button"
+                                            data-id="urban-sneakers" data-name="Urban Sneakers"
+                                            data-price="649000"
+                                            data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80"
+                                            aria-label="Tambah Urban Sneakers ke keranjang">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 product-item" data-category="electronics" data-name="Studio Headphones">
+                        <article class="product-card">
+                            <div class="product-image-wrap">
+                                <button class="favorite-btn" type="button" aria-label="Tambah Studio Headphones ke wishlist"
+                                        data-wishlist-id="studio-headphones">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=85"
+                                     alt="Studio Headphones" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Electronics</span>
+                                <h3>Studio Headphones</h3>
+                                <p>Immersive sound with a comfortable everyday fit.</p>
+                                <div class="rating"><i class="bi bi-star-fill"></i><strong>4.7</strong><span>74 reviews</span></div>
+                                <div class="product-bottom">
+                                    <div class="price"><strong>Rp899.000</strong></div>
+                                    <button class="add-cart-btn" type="button"
+                                            data-id="studio-headphones" data-name="Studio Headphones"
+                                            data-price="899000"
+                                            data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80"
+                                            aria-label="Tambah Studio Headphones ke keranjang">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 product-item" data-category="accessories" data-name="Daily Leather Bag">
+                        <article class="product-card">
+                            <div class="product-image-wrap">
+                                <span class="product-badge">FAVORITE</span>
+                                <button class="favorite-btn" type="button" aria-label="Tambah Daily Leather Bag ke wishlist"
+                                        data-wishlist-id="daily-leather-bag">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=85"
+                                     alt="Daily Leather Bag" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Accessories</span>
+                                <h3>Daily Leather Bag</h3>
+                                <p>A versatile carry-all made for everyday plans.</p>
+                                <div class="rating"><i class="bi bi-star-fill"></i><strong>4.9</strong><span>113 reviews</span></div>
+                                <div class="product-bottom">
+                                    <div class="price"><strong>Rp459.000</strong></div>
+                                    <button class="add-cart-btn" type="button"
+                                            data-id="daily-leather-bag" data-name="Daily Leather Bag"
+                                            data-price="459000"
+                                            data-image="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=300&q=80"
+                                            aria-label="Tambah Daily Leather Bag ke keranjang">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 product-item" data-category="fashion" data-name="Essential Hoodie">
+                        <article class="product-card">
+                            <div class="product-image-wrap">
+                                <button class="favorite-btn" type="button" aria-label="Tambah Essential Hoodie ke wishlist"
+                                        data-wishlist-id="essential-hoodie">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=85"
+                                     alt="Essential Hoodie" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Fashion</span>
+                                <h3>Essential Hoodie</h3>
+                                <p>Soft everyday layering with a relaxed fit.</p>
+                                <div class="rating"><i class="bi bi-star-fill"></i><strong>4.8</strong><span>87 reviews</span></div>
+                                <div class="product-bottom">
+                                    <div class="price"><strong>Rp379.000</strong></div>
+                                    <button class="add-cart-btn" type="button"
+                                            data-id="essential-hoodie" data-name="Essential Hoodie"
+                                            data-price="379000"
+                                            data-image="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=300&q=80"
+                                            aria-label="Tambah Essential Hoodie ke keranjang">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 product-item" data-category="electronics" data-name="Mini Speaker">
+                        <article class="product-card">
+                            <div class="product-image-wrap">
+                                <span class="product-badge">SALE</span>
+                                <button class="favorite-btn" type="button" aria-label="Tambah Mini Speaker ke wishlist"
+                                        data-wishlist-id="mini-speaker">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=85"
+                                     alt="Mini Speaker" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Electronics</span>
+                                <h3>Mini Speaker</h3>
+                                <p>Portable sound with a compact, clean design.</p>
+                                <div class="rating"><i class="bi bi-star-fill"></i><strong>4.6</strong><span>61 reviews</span></div>
+                                <div class="product-bottom">
+                                    <div class="price"><del>Rp349.000</del><strong>Rp299.000</strong></div>
+                                    <button class="add-cart-btn" type="button"
+                                            data-id="mini-speaker" data-name="Mini Speaker"
+                                            data-price="299000"
+                                            data-image="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=300&q=80"
+                                            aria-label="Tambah Mini Speaker ke keranjang">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 7 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 product-item" data-category="accessories" data-name="Classic Sunglasses">
+                        <article class="product-card">
+                            <div class="product-image-wrap">
+                                <button class="favorite-btn" type="button" aria-label="Tambah Classic Sunglasses ke wishlist"
+                                        data-wishlist-id="classic-sunglasses">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=85"
+                                     alt="Classic Sunglasses" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Accessories</span>
+                                <h3>Classic Sunglasses</h3>
+                                <p>A timeless frame that completes any everyday look.</p>
+                                <div class="rating"><i class="bi bi-star-fill"></i><strong>4.7</strong><span>52 reviews</span></div>
+                                <div class="product-bottom">
+                                    <div class="price"><strong>Rp259.000</strong></div>
+                                    <button class="add-cart-btn" type="button"
+                                            data-id="classic-sunglasses" data-name="Classic Sunglasses"
+                                            data-price="259000"
+                                            data-image="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=300&q=80"
+                                            aria-label="Tambah Classic Sunglasses ke keranjang">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 8 -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 product-item" data-category="fashion" data-name="Classic Watch">
+                        <article class="product-card">
+                            <div class="product-image-wrap">
+                                <span class="product-badge">EDITORS PICK</span>
+                                <button class="favorite-btn" type="button" aria-label="Tambah Classic Watch ke wishlist"
+                                        data-wishlist-id="classic-watch">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=85"
+                                     alt="Classic Watch" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Fashion</span>
+                                <h3>Classic Watch</h3>
+                                <p>A refined everyday watch with a timeless profile.</p>
+                                <div class="rating"><i class="bi bi-star-fill"></i><strong>4.8</strong><span>78 reviews</span></div>
+                                <div class="product-bottom">
+                                    <div class="price"><strong>Rp529.000</strong></div>
+                                    <button class="add-cart-btn" type="button"
+                                            data-id="classic-watch" data-name="Classic Watch"
+                                            data-price="529000"
+                                            data-image="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=300&q=80"
+                                            aria-label="Tambah Classic Watch ke keranjang">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="empty-products d-none" id="emptyProducts">
+                    <i class="bi bi-search"></i>
+                    <h3>No products found</h3>
+                    <p>Try another category.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROMO ==================== -->
+        <section class="promo-section">
+            <div class="container">
+                <div class="promo-banner">
+                    <div>
+                        <span class="eyebrow">NATEVA EDIT</span>
+                        <h2>Less noise.<br>More things you love.</h2>
+                        <p>Enjoy up to 30% off selected everyday essentials.</p>
+                        <a href="#shop" class="btn btn-light">Shop the edit <i class="bi bi-arrow-up-right ms-2"></i></a>
+                    </div>
+                    <div class="promo-number">30<span>%</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WHY US ==================== -->
+        <section class="benefits-section">
+            <div class="container">
+                <div class="section-top">
+                    <div>
+                        <span class="eyebrow">WHY NATEVA</span>
+                        <h2>Shopping, made simple.</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="benefit-card">
+                            <i class="bi bi-patch-check"></i>
+                            <h3>Quality checked</h3>
+                            <p>Every collection is selected with quality and everyday use in mind.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="benefit-card">
+                            <i class="bi bi-truck"></i>
+                            <h3>Fast delivery</h3>
+                            <p>Simple, reliable delivery for orders wherever you are.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="benefit-card">
+                            <i class="bi bi-arrow-counterclockwise"></i>
+                            <h3>Easy returns</h3>
+                            <p>A straightforward return experience when something isn't right.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="benefit-card">
+                            <i class="bi bi-chat-dots"></i>
+                            <h3>Here to help</h3>
+                            <p>Friendly support whenever you need product information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT ==================== -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="eyebrow">OUR PHILOSOPHY</span>
+                        <h2>Keep the good things close.</h2>
+                        <p>
+                            NATEVA brings together useful, beautiful pieces for the moments
+                            that make up everyday life. No unnecessary noise — just a considered
+                            collection of things worth having.
+                        </p>
+                        <a href="#shop" class="text-link">Discover the collection <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=85"
+                                 alt="NATEVA lifestyle collection" class="about-image">
+                            <div class="about-caption">
+                                <span>CURATED</span>
+                                <strong>For your everyday.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NEWSLETTER ==================== -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter">
+                    <div>
+                        <span class="eyebrow">STAY IN THE LOOP</span>
+                        <h2>Good things, occasionally.</h2>
+                        <p>Get new arrivals, special offers, and things worth knowing.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <label for="emailInput" class="visually-hidden">Email address</label>
+                        <input type="email" id="emailInput" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-dark">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <a class="footer-brand" href="#home">
+                        <span class="brand-mark">N</span>
+                        <span>NATEVA</span>
+                    </a>
+                    <p class="footer-copy">
+                        Curated everyday essentials for people who appreciate simple,
+                        useful, beautiful things.
+                    </p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h3>Contact</h3>
+                    <ul class="contact-list">
+                        <li><i class="bi bi-envelope"></i> hello@nateva.id</li>
+                        <li><i class="bi bi-telephone"></i> +62 812 3456 7890</li>
+                        <li><i class="bi bi-geo-alt"></i> Medan, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© <span id="currentYear"></span> NATEVA. All rights reserved.</span>
+                <span>Designed for everyday living.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== CART OFFCANVAS ==================== -->
+    <div class="offcanvas offcanvas-end cart-canvas" tabindex="-1"
+         id="cartCanvas" aria-labelledby="cartCanvasLabel">
+        <div class="offcanvas-header">
+            <div>
+                <span class="eyebrow">YOUR BAG</span>
+                <h2 id="cartCanvasLabel">Shopping cart</h2>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <div id="cartItems"></div>
+
+            <div class="empty-cart" id="emptyCart">
+                <div class="empty-cart-icon"><i class="bi bi-bag"></i></div>
+                <h3>Your cart is empty.</h3>
+                <p>Add something you love to get started.</p>
+                <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas">Start shopping</button>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-summary">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">Rp0</strong>
+            </div>
+            <p>Shipping calculated at checkout.</p>
+            <button type="button" class="btn btn-dark w-100 btn-lg" id="checkoutButton">
+                Checkout <i class="bi bi-arrow-right ms-2"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== SEARCH MODAL ==================== -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content search-modal">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="searchModalLabel">Find something.</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="search-input-wrap">
+                        <i class="bi bi-search"></i>
+                        <input type="search" id="searchInput" placeholder="Search products..." autocomplete="off">
+                    </div>
+                    <p class="search-hint">Try “sneakers”, “watch”, “bag”, or “headphones”.</p>
+                    <div id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="natevaToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                <i class="bi bi-check-circle-fill"></i>
+                <span id="toastText">Added to your bag.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
